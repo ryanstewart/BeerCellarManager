@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Beer Inventory</title>
+<link rel="stylesheet" href="scripts/jquery.mobile-1.0rc1.min.css" />
+<script src="scripts/jquery-1.6.4.min.js"></script>
+<script src="scripts/jquery.mobile-1.0rc1.min.js"></script>
+<script src="scripts/phonegap.js" type="text/javascript"></script>
+<script src="scripts/Lawnchair.js"></script>
+<script src="scripts/webkit-sqlite.js"></script>
+<script src="scripts/dom.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/mustache.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="beers" style="type-inline">
+	<div data-role="header">
+		<h1>Your Beers</h1>
+        <a href="beer_details.html" data-icon="plus" class="ui-btn-right">Add</a>
+	</div>
+	<div data-role="content">
+	    <ul id="beer_list" data-role="listview">
+    
+    	</ul>
+    	<button id="save">Save</button>
+        <button id="modify">Modify</button>
+        <button id="retrieve">Retrieve</button>               		
+	</div>
+	<div data-role="footer" data-id="foo1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="beers.html" class="ui-btn-active ui-state-persist">Beers</a></li>
+				<li><a href="styles.html">Styles</a></li>
+				<li><a href="scan.html">Scan Barcode</a></li>
+				<li><a href="locations.html">Locations</a></li>                    
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Page Two</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Page Three</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Page Four</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+</body>
+</html>

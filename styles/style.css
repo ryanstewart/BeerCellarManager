@@ -1,0 +1,8 @@
+/* CSS Document */
+.hiddenfield {
+	visibility:hidden;
+}
+
+.visiblefield {
+	visibility:visible;
+}
