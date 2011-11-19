@@ -7,20 +7,20 @@
 	        <div id="beerstyle">{{ beerstyle }}</div>
 			<hr>
 	        <div id="quantity" data-role="fieldcontain">
-				<label for="quantityslider">Quantity:</label>
+				<label for="quantityslider">Quantity: {{quantity}} </label>
 				<input type="range" name="quantityslider" id="quantityslider" value="{{ quantity }}" min="0" max="25"  />
 			</div>
 	        <div id="purchasedate" data-role="fieldcontain">
     	    	<label for="purchasedatefield">Purchase Date:</label>
-                <input type="date" name="purchasedatefield" id="purchasedatefield" value="{{ purchaseDate }}"  />
+                <input type="date" name="purchasedatefield" id="purchasedatefield" value="{{ purchasedate }}"  />
 			</div>
 	        <div id="price" data-role="fieldcontain"><input type="text" value="{{ price }}"></div>
 	        <div id="cellardate" data-role="fieldcontain">
-    	    	<input type="date" name="cellarfield" id="cellardatefield" value="{{ cellarDate }}"  />
+    	    	<input type="date" name="cellarfield" id="cellardatefield" value="{{ cellardate }}"  />
 			</div>
     	    <div id="cellartemp">Cellar Temperature: {{ cellarTemperature }}</div>
 	        <div id="brewdate" data-role="fieldcontain">
-    	    	<input type="date" name="brewdatefield" id="brewdatefield" value="{{ brewDate }}"  />
+    	    	<input type="date" name="brewdatefield" id="brewdatefield" value="{{ brewdate }}"  />
 	        </div>
 			<a href="#pintley">This beer on Pintely</a>
 	        <button type="submit" data-theme="a">Submit</button>
