@@ -73,18 +73,15 @@ $(function(e) {
 					$("#content").html(renderedhtml);	
 				});
 		});					
-		
-		$.get('templates/beer_detail.mustache',
-			function(data){
-				template = data;	
-			});
-		
 
 	});
 	
 	$(document).bind( "mobileinit", function(){
-			console.log('test');
-			$.mobile.page.prototype.options.degradeInputs.date = true;
+			//console.log('test');
+			//$.mobile.page.prototype.options.degradeInputs.date = true;
+			$(document).bind("mobileinit", function() {
+      $.mobile.page.prototype.options.addBackBtn = true;
+ }); 
 	});	
 	
 	function getBeerByID(id)
