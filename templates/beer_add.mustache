@@ -1,0 +1,46 @@
+<form id="beerform" action="#" method="post">
+			<div id="beernamediv" data-role="fieldcontain">
+				<label for="beername">Beer Name:</label>
+				<input type="text" name="beername" />
+            </div>	
+	        <div id="brewernamediv" data-role="fieldcontain">
+	        	<label for="brewername">Brewer Name:</label>
+				<input type="text" name="brewername" />
+	        </div>
+	        <div id="brewerlocationdiv" data-role="fieldcontain">
+	        	<label for="brewerlocation">Brewer Location:</label>
+				<input type="text" name="brewerlocation" />
+	        </div>
+	        <div id="beerstylediv" data-role="fieldcontain">
+	        	<label for="beerstyle">Beer Style:</label>
+				<input type="text" name="beerstyle" />
+	        </div>
+			<hr>
+	        <div id="quantitydiv" data-role="fieldcontain">
+				<label for="quantity">Quantity: </label>
+				<input type="range" name="quantity" id="quantity" value="0" min="0" max="25"  />
+			</div>
+	        <div id="purchasedatediv" data-role="fieldcontain">
+    	    	<label for="purchasedate">Purchase Date:</label>
+                <input type="date" name="purchasedate" id="purchasedate"   />
+			</div>
+	        <div id="pricediv" data-role="fieldcontain">
+	        	<label for="price">Price:</label>
+	        	<input type="text" name="price">
+	        </div>
+	        <div id="cellardatediv" data-role="fieldcontain">
+    	    	<label for="cellardate">Cellar Date</label>
+    	    	<input type="date" name="cellardate" id="cellardate"  />
+			</div>
+    	    <div id="cellartempdiv" data-role"fieldcontain">
+    	    	<label for="cellartemp">Cellar Temperature:</label>
+    	    	<input type="text" name="cellartemp" />
+    	    </div>
+	        <div id="brewdatediv" data-role="fieldcontain">
+    	    	<label for="brewdate">Brew Date</label>
+    	    	<input type="date" name="brewdate" id="brewdate"  />
+	        </div>
+			<a href="#pintley">This beer on Pintely</a><br />
+			<!--<input type="submit" value="Submit" />-->
+	        <button name="submit" type="submit" data-theme="a">Submit</button>
+        </form>

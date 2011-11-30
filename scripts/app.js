@@ -63,19 +63,44 @@ $(function(e) {
 			  beerID = hash[1];
 		  }
 		}
-		
-		beers.get(beerID,function(obj){
-			beerData = obj.value;
-			$.get('templates/beer_detail.mustache',
+		if(beerID)
+		{
+			beers.get(beerID,function(obj){
+				beerData = obj.value;
+				$.get('templates/beer_detail.mustache',
+					function(data){
+						template = data;	
+						var renderedhtml = Mustache.to_html( template,beerData);
+						$("#content").html(renderedhtml);	
+					});
+			});
+		} else {
+			$.get('templates/beer_add.mustache',
 				function(data){
-					template = data;	
-					var renderedhtml = Mustache.to_html( template,beerData);
-					$("#content").html(renderedhtml);	
+					template = data;
+					var renderedhtml = Mustache.to_html(template);
+					$('#content').html(renderedhtml);
+					// The template should be loaded.
+					$('#beerform').submit(function(e){
+						var beer_obj = new Object();
+						$('#beerform :input').each(function(){
+							beer_obj[this.name] = this.value;
+						});
+						beers.all(function(arrBeers){
+							
+							var beer_db_obj = {beername:beer_obj.beername,brewername:beer_obj.brewername,brewerlocation:beer_obj.brewerlocation
+					,beerstyle:beer_obj.beerstyle,quantity:beer_obj.quantity,purchasedate:beer_obj.purchasedate,price:beer_obj.price
+					,cellardate:beer_obj.cellardate,cellartemp:beer_obj.cellartemp,brewdate:beer_obj.brewdate};
+							beers.save({key:arrBeers.length.toString(),value:beer_db_obj});
+						});
 				});
-		});					
+	
+			});
+		}					
 
 	});
 	
+
 	$(document).bind( "mobileinit", function(){
 			//console.log('test');
 			//$.mobile.page.prototype.options.degradeInputs.date = true;
